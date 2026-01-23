@@ -14,7 +14,7 @@ export default function About() {
         <article className="h-[70vh] mt-6 text-slate-900 dark:text-white mx-4 overflow-y-auto no-scrollbar hover:cursor-default">
           <section className="mt-2 text-center">
             <figure className="flex items-center justify-center">
-              <img className="rounded-full object-cover shadow-xl hover:outline-2 hover:outline-cyan-600 dark:outline-2 dark:outline-white hover:outline-cyan-600 dark:hover:outline-green-600" src={catpfp}/>
+              <img className="rounded-full object-cover shadow-xl hover:outline-2 hover:outline-cyan-600 dark:outline-2 dark:outline-white dark:hover:outline-green-600" src={catpfp}/>
             </figure>
 
             <h1 className="text-3xl font-bold mt-3">
