@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: Inter;
+    src: url('..\\assets\\fonts');
+}
+
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+
+@theme {
+    --font-inter: Inter, "sans-serif";
+};
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
