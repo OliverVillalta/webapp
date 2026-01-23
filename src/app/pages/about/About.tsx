@@ -44,18 +44,18 @@ export default function About() {
               <h3 className="text-xl mb-2 text-shadow-md">Programming Languages</h3> 
               {/* Say what you wish, but this is what peak programming looks like
                   I came back to this and I regret it...*/}
-              <div className="p-2 h-20 text-white dark:border dark:border-white rounded-xl grid grid-cols-3 gap-3">
+              <div className="p-2 md:h-20 text-white dark:border dark:border-white rounded-xl grid grid-cols-2 md:grid-cols-3 gap-3">
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">Python</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">C++</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">Java</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">JavaScript</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">MySQL</p>
-                <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">HTML5 + CSS</p>
+                <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">HTML + CSS</p>
               </div>
             </div>
             <div className="text-center mt-6">
               <h3 className="text-center text-xl mb-2 text-shadow-md">Tools</h3>
-              <div className="p-2 h-12 text-white dark:border dark:border-white rounded-xl grid grid-cols-3 gap-3">
+              <div className="p-2 md:h-12 text-white dark:border dark:border-white rounded-xl grid grid-cols-2 md:grid-cols-3 gap-3">
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">React</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">PostgreSQL</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">AWS</p>
@@ -63,7 +63,7 @@ export default function About() {
             </div>
             <div className="text-center mt-6">
               <h3 className="text-center text-xl mb-2 text-shadow-md">Concepts</h3>
-              <div className="p-2 h-20 text-white dark:border dark:border-white rounded-xl grid grid-cols-3 gap-3">
+              <div className="p-2 md:h-20 text-white dark:border dark:border-white rounded-xl grid md:grid-cols-3 gap-3">
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">OOP Principles</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">Agile Methdology</p>
                 <p className="shadow-xl bg-cyan-600 dark:bg-emerald-600 rounded-full mx-4 text-bold">RESTful API</p>

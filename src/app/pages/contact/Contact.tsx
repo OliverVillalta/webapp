@@ -23,7 +23,7 @@ export default function About() {
                     <p>The fastest way to get a response from me is through email! I don't use social media- so no insta, twitter, or facebook. So please direct any questions or comments to my email.</p>
                 </div>
                 <section className="mt-5">
-                    <p>Email: o.villalta15@gmail.com</p>
+                    <p>Email: oliverjvillaltap15@gmail.com</p>
                 </section>
             </section>
         </article>

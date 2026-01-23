@@ -10,21 +10,21 @@ export default function Project() {
   return (
     <main className="h-screen bg-linear-to-b from-white to-rose-200 dark:from-black dark:to-gray-900 flex items-center justify-center">
       <DarkModeToggle className="absolute top-4 right-4"/>
-      <div className="shadow-xl dark:border-2 dark:border-white w-8/10 mx-4 rounded-xl p-6">
-        <header className="flex items-center text-slate-900 dark:text-white text-xl dark:border-b-2 h-8 sticky top-0 bg-transparent">
+      <div className="shadow-xl dark:border-2 dark:border-white w-8/10 mx-4 rounded-xl p-4 md:p-6">
+        <header className="flex items-center text-slate-900 dark:text-white text-xl dark:border-b-2 md:h-8 sticky top-0 bg-transparent">
           <Navbar />
         </header>
 
-        <article className="h-[70vh] mt-6 text-slate-900 dark:text-white mx-5 overflow-y-auto no-scrollbar cursor-default">
+        <article className="h-[70vh] text-slate-900 dark:text-white mx-5 overflow-y-auto no-scrollbar cursor-default">
             <section className="flex mt-2 items-center justify-center">
-                <div className="flex-col px-2 py-3 text-white bg-cyan-600 shadow-xl dark:bg-emerald-600 rounded-lg">
+                <div className="flex-col px-3 md:py-3 text-white bg-cyan-600 shadow-xl dark:bg-emerald-600 rounded-lg">
                     <p>Currently accepting offers via my work email!</p>
                     <p>I do data analysis, data preprocessing, web development, and API development :)</p>
                 </div>
             </section>
 
-            <section className="columns-2 pt-8 pb-10 pl-5 text-slate-900 dark:text-white">
-              <h1 className="text-left font-bold text-3xl">TECHNOLOGIES</h1>
+            <section className="block:md md:columns-2 pt-8 pb-10 pl-5 text-slate-900 dark:text-white">
+              <h1 className="text-left font-bold text-2xl md:text-3xl">TECHNOLOGIES</h1>
                 <div className="flex flex-wrap mb-5">
                     {TechList.map(skill => {
                       return (
@@ -34,7 +34,7 @@ export default function Project() {
                       )
                     })}
                 </div>
-                <h1 className="text-left font-bold text-3xl">LANGUAGES</h1>
+                <h1 className="text-left font-bold text-2xl md:text-3xl">LANGUAGES</h1>
                 <div className="flex flex-wrap mb-5">
                     {DevList.map(skill => {
                       return (
@@ -50,7 +50,7 @@ export default function Project() {
                 <h1 className="mt-8 px-5 font-bold text-3xl">
                     DATA SCIENCE
                 </h1>
-                <div className="mt-2 px-5 grid grid-cols-2 gap-10">
+                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Applying Graph Neutral Network to Cardiovascular Data" 
@@ -75,7 +75,7 @@ export default function Project() {
                 <h1 className="mt-8 px-5 font-bold text-3xl">
                     CLOUD COMPUTING
                 </h1>
-                <div className="mt-2 px-5 grid grid-cols-2 gap-10">
+                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Creating AWS S3 Buckets and Uploading Files" 
@@ -116,7 +116,7 @@ export default function Project() {
                 <h1 className="mt-8 px-5 font-bold text-3xl">
                   WEB DEVELOPMENT
                 </h1>
-                <div className="mt-2 px-5 grid grid-cols-2 gap-10">
+                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Portfolio Site" 
@@ -137,7 +137,6 @@ export default function Project() {
                   </div>
                 </div>
             </section>
-            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white m-5"></hr>
         </article>
       </div>
     </main>
