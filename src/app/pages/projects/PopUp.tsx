@@ -42,8 +42,8 @@ export const PopUp = ({ title, content, tags, image, link }: PopUpProps) => {
                             <h2 className="text-2xl font-semibold mb-2">{title}</h2>
                             <p className="dark:text-gray-300 leading-relaxed">{content}</p>
                         </div>
-                        <div className="mt-auto flex flex-col justify-center px-[35%] pb-6">
-                            <button onClick={() => window.open(link, '_blank', 'noopener,noreferrer')} className="font-semibold shadow-md dark:bg-emerald-800 rounded-xl h-10 mb-2 hover:font-bold hover:cursor-pointer"><Github className="inline h-5 pb-1"/> See more on github</button>
+                        <div className="mt-auto flex flex-col justify-center px-[20%] md:px-[35%] pb-6">
+                            <button onClick={() => window.open(link, '_blank', 'noopener,noreferrer')} className="font-semibold shadow-md dark:bg-emerald-800 rounded-xl h-10 mb-2 hover:font-bold hover:cursor-pointer"><Github className="inline md:h-5 pb-1"/> See more on github</button>
                             <button onClick={() => setOpen(false)} className="transition underline font-semibold hover:font-bold hover:cursor-pointer">Go back to projects</button>
                         </div>
                     </div>

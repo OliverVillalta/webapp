@@ -8,22 +8,23 @@ const TechList = ["Git", "Linux/WSL", "React", "TailWindCSS",  "Django", "AWS (S
 
 export default function Project() {
   return (
-    <main className="h-screen bg-linear-to-b from-white to-rose-200 dark:from-black dark:to-gray-900 flex items-center justify-center">
-      <DarkModeToggle className="absolute top-4 right-4"/>
-      <div className="shadow-xl dark:border-2 dark:border-white w-8/10 mx-4 rounded-xl p-4 md:p-6">
-        <header className="flex items-center text-slate-900 dark:text-white text-xl dark:border-b-2 md:h-8 sticky top-0 bg-transparent">
+    <main className="overflow-hidden h-screen bg-linear-to-b from-white to-rose-200 dark:from-black dark:to-gray-900 flex items-center justify-center">
+      <div className="hidden md:block"><DarkModeToggle className="absolute top-4 right-4"/></div>
+      <div className="md:shadow-xl md:dark:border-2 md:dark:border-white md:w-8/10 mx-4 rounded-xl md:p-6">
+        <header className="flex justify-between items-center text-slate-900 dark:text-white text-xl dark:border-b-2 md:h-8 sticky bg-transparent">
           <Navbar />
+          <div className="md:hidden"><DarkModeToggle/></div>
         </header>
 
-        <article className="h-[70vh] text-slate-900 dark:text-white mx-5 overflow-y-auto no-scrollbar cursor-default">
+        <article className="h-[90vh] md:h-[80vh] text-slate-900 dark:text-white md:mx-5 overflow-y-auto no-scrollbar cursor-default">
             <section className="flex mt-2 items-center justify-center">
-                <div className="flex-col px-3 md:py-3 text-white bg-cyan-600 shadow-xl dark:bg-emerald-600 rounded-lg">
+                <div className="flex-col p-5 md:px-3 md:py-3 text-white bg-cyan-700 shadow-xl dark:bg-emerald-600 rounded-lg text-sm md:text-base">
                     <p>Currently accepting offers via my work email!</p>
                     <p>I do data analysis, data preprocessing, web development, and API development :)</p>
                 </div>
             </section>
 
-            <section className="block:md md:columns-2 pt-8 pb-10 pl-5 text-slate-900 dark:text-white">
+            <section className="block:md md:columns-2 pt-8 pb-5 md:pl-5 text-slate-900 dark:text-white">
               <h1 className="text-left font-bold text-2xl md:text-3xl">TECHNOLOGIES</h1>
                 <div className="flex flex-wrap mb-5">
                     {TechList.map(skill => {
@@ -45,12 +46,12 @@ export default function Project() {
                     })}
                 </div>
             </section>
-            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white m-5"></hr>
+            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white md:m-5"></hr>
             <section>
-                <h1 className="mt-8 px-5 font-bold text-3xl">
+                <h1 className="mt-8 md:px-5 font-bold text-3xl">
                     DATA SCIENCE
                 </h1>
-                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
+                <div className="mt-2 md:px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Applying Graph Neutral Network to Cardiovascular Data" 
@@ -70,12 +71,12 @@ export default function Project() {
                   </div>
                 </div>
             </section>
-            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white m-5"></hr>
+            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white my-10 md:m-5"></hr>
             <section>
-                <h1 className="mt-8 px-5 font-bold text-3xl">
+                <h1 className="mt-8 md:px-5 font-bold text-3xl">
                     CLOUD COMPUTING
                 </h1>
-                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
+                <div className="mt-2 md:px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Creating AWS S3 Buckets and Uploading Files" 
@@ -111,12 +112,12 @@ export default function Project() {
                   </div>
                 </div>
             </section>
-            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white m-5"></hr>
+            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white my-10 md:m-5"></hr>
             <section>
-                <h1 className="mt-8 px-5 font-bold text-3xl">
+                <h1 className="mt-8 md:px-5 font-bold text-3xl">
                   WEB DEVELOPMENT
                 </h1>
-                <div className="mt-2 px-5 grid md:grid-cols-2 gap-10">
+                <div className="mt-2 md:px-5 grid md:grid-cols-2 gap-10">
                   <div>
                     <PopUp 
                       title="Portfolio Site" 

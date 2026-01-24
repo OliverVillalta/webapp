@@ -62,12 +62,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center md:hidden">
+      <nav className="flex items-center mb-2 md:hidden">
         <button onClick={() => setOpen(true)}>
-          <Menu className="w-7 mb-3 text-cyan-600 dark:text-white" />
+          <Menu className="w-7 mr-2 text-cyan-600 dark:text-white" />
         </button>
 
-        <h1 className="text-xl mb-4 font-bold dark:text-emerald-600">
+        <h1 className="text-xl font-bold dark:text-emerald-600">
           {activeLink ? activeLink.label : "Menu"}
         </h1>
 

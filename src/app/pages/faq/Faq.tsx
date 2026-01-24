@@ -5,15 +5,16 @@ import { FileQuestionIcon } from "lucide-react";
 
 export default function Faq() {
   return (
-    <main className="h-screen overflow-hidden bg-linear-to-b from-white to-rose-200 dark:from-black dark:to-gray-900 flex items-center justify-center">
-      <DarkModeToggle className="absolute top-4 right-4"/>
-      <div className="dark:border-2 shadow-xl dark:border-white w-8/10 mx-4 rounded-xl p-6">
-        <header className="flex items-center dark:text-white text-xl dark:border-b-2 h-8 sticky top-0 bg-transparent">
+    <main className="overflow-hidden h-screen bg-linear-to-b from-white to-rose-200 dark:from-black dark:to-gray-900 flex items-center justify-center">
+      <div className="hidden md:block"><DarkModeToggle className="absolute top-4 right-4"/></div>
+      <div className="md:shadow-xl md:dark:border-2 md:dark:border-white md:w-8/10 mx-4 rounded-xl md:p-6">
+        <header className="flex justify-between items-center text-slate-900 dark:text-white text-xl dark:border-b-2 md:h-8 sticky bg-transparent">
           <Navbar />
+          <div className="md:hidden"><DarkModeToggle/></div>
         </header>
 
-        <article className="h-[70vh] mt-6 dark:text-white mx-4 overflow-y-auto no-scrollbar">
-            <section className="mt-2">
+        <article className="h-[90vh] md:h-[70vh] dark:text-white md:mx-4 overflow-y-auto no-scrollbar">
+            <section>
                 <h1 className="flex gap-4 text-2xl font-bold mt-3">
                     <FileQuestionIcon className="mt-1" size={28}/> 
                     <p>Frequently Asked Questions</p>
