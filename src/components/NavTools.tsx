@@ -77,7 +77,7 @@ export const Navbar = () => {
         <div className="fixed inset-0 bg-black/40 z-40 md:hidden" onClick={() => setOpen(false)}/>
       )}
 
-      <aside className={`fixed top-0 left-0 h-full w-72 bg-linear-to-b dark:from-black dark:to-gray-900 dark:text-white shadow-xl z-50 md:hidden transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"}`}>
+      <aside className={`fixed top-0 left-0 h-full w-72 bg-linear-to-b  from-white to-rose-200 dark:from-black dark:to-gray-900 dark:text-white shadow-xl z-50 md:hidden transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="p-6">
           <h2 className="text-xl font-bold mb-6">Navigation</h2>
 
@@ -85,7 +85,7 @@ export const Navbar = () => {
             {navLinks.map(link => {
               const Icon = link.objImg
               return (
-                <NavLink key={link.href} to={link.href} onClick={() => setOpen(false)} className={({ isActive }) => `flex items-center gap-4 px-3 py-2 text-lg rounded-md transition ${isActive ? "dark:text-emerald-600 font-bold" : "dark:hover:text-emerald-300"}`}>
+                <NavLink key={link.href} to={link.href} onClick={() => setOpen(false)} className={({ isActive }) => `flex items-center gap-4 px-3 py-2 text-lg rounded-md transition ${isActive ? "text-cyan-600 dark:text-emerald-600 font-bold" : "dark:hover:text-emerald-300"}`}>
                   <Icon size={26} />
                   {link.label}
                 </NavLink>
