@@ -1,5 +1,5 @@
 import { type DataDrivenPropertyValueSpecification} from 'maplibre-gl';
-import { type SubwaySearchItem } from '../components/SubwayMap';
+import { type MTAProps } from '../components/SubwayMap';
 
 export const LINE_COLORS: Record<string, string> = {
     '1': '#EE352E', '2': '#EE352E', '3': '#EE352E',
@@ -23,19 +23,22 @@ export const getLineColorMatch = () => {
     return matchExpression as DataDrivenPropertyValueSpecification<string>;
 };
 
-export const getReadableStatus = (rawStatus: string, lookup: Map<string, SubwaySearchItem>): string => {
-    const parts = rawStatus.split(" ");
-    const action = parts[0].replace(/_/g, " ");
-    const stopId = parts[1];
-    
-    if (!stopId) return action;
+export const getReadableTrainStatus = (tripId: string, currentStop: string, status: string, lookup: Map<string, MTAProps>): string => {
+    let direction: string = "";
+    let new_status:string = status.replaceAll("_", " ");
+    if (tripId.includes("..N")) {
+        direction = "(Northbound)";
+    }
+    if (tripId.includes("..S")) {
+        direction = "(Southbound)";
+    }
 
-    const direction = stopId.endsWith("N") ? " (Northbound)" : 
-                    stopId.endsWith("S") ? " (Southbound)" : "";
-                    
-    const lookupID = direction ? stopId.slice(0, -1) : stopId;
-    const name =  lookup.get(lookupID)?.name;
+    if (currentStop.endsWith('N') || currentStop.endsWith('S')) {
+        currentStop = currentStop.substring(0, currentStop.length-1);
+    }
 
-    return `${action} ${name}${direction}`;
+    const name =  lookup.get(currentStop)?.name;
+
+    return `${new_status} ${name} ${direction}`;
 };
 

@@ -21,7 +21,9 @@ export function SearchBar<T>({
     useEffect(() => {
         const timer = setTimeout(() => {
             if (query.length > 0) {
-                const filtered = matchSorter(data, query, {
+                const filtered = matchSorter(
+                    data, 
+                    query, {
                         keys: searchKeys.map(key => String(key)),
                         baseSort: (a, b) => (a.index < b.index ? -1:1),
                 }).slice(0, 5);

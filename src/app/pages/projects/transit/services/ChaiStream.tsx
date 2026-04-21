@@ -1,27 +1,31 @@
-export type TrainUpdate = {
+export type TripInfo = {
     id: string;
     line: string;
     status: string;
-    lon: number;
-    lat: number;
+    upcomingStops: string[] | null;
+};
+
+export type LineUpdate = {
+    id: string;
+    activeTrains: TripInfo[] | null;
 };
 
 export type StationUpdate = {
     id: string;
-    name: string;
     arrivals: {
         id: string;
-        line: string;
+        routeid: string;
+        currentStop: string;
         status: string;
         eta: number;
-    }[];
+    }[] | null;
 };
 
-export const createMTAStream = <T,>(onUpdate: (data: T) => void, filter?: { type: 'station' | 'line' | 'trip'; id: string }) => {
+export const createMTAStream = <T,>(onUpdate: (data: T) => void, filter?: { type: string; id: string }) => {
     const BASE_URL = import.meta.env.VITE_API_URL || '';
-    const params = filter ? `?type=${filter.type}&id=${filter.id}` : '';
+    const params = filter ? `/${filter.type}/${filter.id}` : '';
     
-    const eventSource = new EventSource(`${BASE_URL}/events${params}`);
+    const eventSource = new EventSource(`${BASE_URL}/transit${params}`);
 
     eventSource.addEventListener('update', (event) => {
         try {

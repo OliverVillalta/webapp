@@ -5,7 +5,10 @@
 }
 
 @import 'tailwindcss';
-@plugin 'tailwind-scrollbar';
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredStrategy: 'pseudoelements';
+}
 
 @theme {
     --font-inter: Inter, "sans-serif";

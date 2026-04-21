@@ -3,8 +3,8 @@ import { DarkModeToggle } from "../../../components/ViewMode.tsx";
 import { PopUp } from "./PopUp.tsx";
 import catpfp from "../../../assets/catpfp.jpg";
 
-const DevList = ["Python", "C++", "Java", "JavaScript", "TypeScript", "SQL", "HTML/CSS"];
-const TechList = ["Git", "Linux/WSL", "React", "TailWindCSS",  "Django", "AWS (S3, EC2, DynamoDB)", "Oracle DB", "PostgreSQL"];
+const DevList = ["Python", "C++", "Java", "Golang", "JavaScript", "TypeScript", "SQL", "HTML/CSS"];
+const TechList = ["Git", "Linux/WSL", "React", "Spring Boot",  "Django", "AWS (S3, EC2, DynamoDB)", "Oracle DB", "PostgreSQL"];
 
 export default function Project() {
   return (
@@ -47,6 +47,41 @@ export default function Project() {
                 </div>
             </section>
             <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white md:m-5"></hr>
+            <section>
+                <h1 className="mt-8 md:px-5 font-bold text-3xl">
+                  FULLSTACK DEVELOPMENT
+                </h1>
+                <div className="mt-2 md:px-5 grid md:grid-cols-2 gap-10">
+                  <div>
+                    <PopUp
+                    title="Live MTA Subway Map"
+                    content="Created a full stack web application that provides a live map of the New York City's Metropolitan Transit Authority's Subway System and current trips."
+                    tags={["React", "TypeScript", "Golang", "Vite", "Docker"]}
+                    image={catpfp}
+                    link="https://github.com/OliverVillalta"
+                    />
+                  </div>
+                  <div>
+                    <PopUp 
+                      title="Portfolio Site" 
+                      content="Developed a web application using React and Tailwind CSS, focusing on responsive design patterns and good practices. Built cloud infrastructure on AWS, deploying the application on an EC2 instance and utilizing NGINX to handle reverse proxy." 
+                      tags={["React", "TypeScript", "TailWindCSS", "Vite", "Python", "AWS"]} 
+                      image={catpfp} 
+                      link="https://github.com/OliverVillalta"
+                    />
+                  </div>
+                  <div>
+                    <PopUp 
+                      title="Hospital Website" 
+                      content="Designed a comprehensive relational database using OracleDB to manage critical healthcare operations, including patient records, pharmacy inventory, staffing, and billing. Developed automated backend logic using PL/SQL triggers and procedures to ensure data integrity and streamline complex transactional workflows. Built a responsive full-stack interface with PHP and Bootstrap, enabling seamless communication between the front-end and the Oracle database via an Apache server environment." 
+                      tags={["PHP", "XAMPP", "BootStrap", "OracleDB", "JavaScript", "CSS"]} 
+                      image={catpfp} 
+                      link="https://github.com/OliverVillalta/Adv_DBS_Project"
+                    />
+                  </div>
+                </div>
+            </section>
+            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white my-10 md:m-5"></hr>
             <section>
                 <h1 className="mt-8 md:px-5 font-bold text-3xl">
                     DATA SCIENCE
@@ -108,32 +143,6 @@ export default function Project() {
                       tags={["Python", "AWS", "Boto3", "EC2", "DynamoDB"]} 
                       image={catpfp} 
                       link="https://github.com/OliverVillalta/AWSDemo"
-                    />
-                  </div>
-                </div>
-            </section>
-            <hr className="border-transparent dark:border-1 dark:border-white text-slate-900 dark:text-white my-10 md:m-5"></hr>
-            <section>
-                <h1 className="mt-8 md:px-5 font-bold text-3xl">
-                  WEB DEVELOPMENT
-                </h1>
-                <div className="mt-2 md:px-5 grid md:grid-cols-2 gap-10">
-                  <div>
-                    <PopUp 
-                      title="Portfolio Site" 
-                      content="Developed a web application using React and Tailwind CSS, focusing on responsive design patterns and good practices. Built cloud infrastructure on AWS, deploying the application on an EC2 instance and utilizing NGINX to handle reverse proxy." 
-                      tags={["React", "TypeScript", "TailWindCSS", "Vite", "Python", "AWS"]} 
-                      image={catpfp} 
-                      link="https://github.com/OliverVillalta"
-                    />
-                  </div>
-                  <div>
-                    <PopUp 
-                      title="Hospital Website" 
-                      content="Designed a comprehensive relational database using OracleDB to manage critical healthcare operations, including patient records, pharmacy inventory, staffing, and billing. Developed automated backend logic using PL/SQL triggers and procedures to ensure data integrity and streamline complex transactional workflows. Built a responsive full-stack interface with PHP and Bootstrap, enabling seamless communication between the front-end and the Oracle database via an Apache server environment." 
-                      tags={["Php", "XAMPP", "BootStrap", "OracleDB", "JavaScript", "CSS"]} 
-                      image={catpfp} 
-                      link="https://github.com/OliverVillalta/Adv_DBS_Project"
                     />
                   </div>
                 </div>
